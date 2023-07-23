@@ -5,6 +5,7 @@ import React from 'react'
 import ToggleButton from '@mui/material/ToggleButton';
 import GppGoodOutlinedIcon from '@mui/icons-material/GppGoodOutlined';
 import CreditScoreOutlinedIcon from '@mui/icons-material/CreditScoreOutlined';
+import GroupIcon from '@mui/icons-material/Group';
 
 function Find() {
   return (
@@ -37,13 +38,12 @@ function Find() {
         </p>
         <div className='flex align-baseline items-center mt-8' id='title'>
           <ToggleButton>
-          <CreditScoreOutlinedIcon/>
+         <GroupIcon/>
           </ToggleButton>
-          <h1 className=' text-gray-800 text-2xl font-semibold ml-5'>CUSTOMIZED PAYMENTS</h1>
+          <h1 className=' text-gray-800 text-2xl font-semibold ml-5'>GROUP SELECTION</h1>
         </div>
         <p className='text-gray-500 text-lg mt-5'>
-         Settle your payment methods and duration as you deal with the freelancers , all type of payments are accepted 
-         and proceeded inside PITCHINI.
+        For bigger Projects , PITCHINI Groups is your option. Recruit Pre-organized teams composition for your End-To-End Projects and more. 
         </p>
       </div>
 

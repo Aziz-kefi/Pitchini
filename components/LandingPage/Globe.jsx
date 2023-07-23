@@ -35,33 +35,6 @@ globe.camera()
   );
 };
 
-// import React, { useEffect } from 'react';
-// import * as THREE from 'three';
-// import Globe from 'globe.gl';
-// import * as topojson from 'topojson-client';
 
-// const GlobeVisualization = () => {
-//     useEffect(() => {
-//       const world = Globe()(document.getElementById('globeViz'))
-//      
-//         .showGlobe(false)
-//         .showAtmosphere(false);
-  
-//       fetch('//unpkg.com/world-atlas/land-110m.json')
-//         .then(res => res.json())
-//         .then(landTopo => {
-//           world
-//             .polygonsData(topojson.feature(landTopo, landTopo.objects.land).features)
-//             .polygonCapMaterial(new THREE.MeshStandardMaterial({ color: '#828282', side: THREE.DoubleSide }))
-//             .polygonSideColor(() => 'rgba(0,0,0,0)');
-//         });
-//     }, []);
-  
-//     return (
-//       <>
-//         <div id="globeViz"></div>
-//       </>
-//     );
-//   };
   
    export default GlobeVisualization;

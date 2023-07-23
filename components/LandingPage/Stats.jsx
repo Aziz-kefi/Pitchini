@@ -9,10 +9,16 @@ function Stats() {
 {
   return (<>
 
-   <motion.div
-    className='  w-screen overflow-hidden grid-flex  rounded-md outline_orange_card_stats grid grid-cols-3 grid-rows-1 gap-4 mb-16 mt-16  content-center text-center '>
-   <div className='ml-28 mt-8 mb-8 flex place-content-between'>
-    <div>
+<motion.div
+      className='w-screen overflow-hidden rounded-md outline_orange_card_stats grid grid-flex grid-cols-3 grid-rows-1 gap-4 mb-16 mt-16 content-center text-center'
+      style={{
+        display: 'grid',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', // Adjust the column width as needed
+        gridTemplateRows: 'auto',
+      }}
+    >
+   <div className='ml-28 mt-8 mb-8 flex place-content-between '>
+    <div >
     <h1 className='font-extrabold text-5xl mb-4  '>98</h1>
     <p className='  text-2xl font-semibold  '>Projects done perfectly</p>
     </div>

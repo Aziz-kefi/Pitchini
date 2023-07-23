@@ -72,25 +72,25 @@ function Contact() {
    
       </motion.section>
 
-   <motion.div  initial={{ opacity: 0 , scale:0.5 }} whileInView={{ opacity: 1 , scale:1 }}  transition={{ duration: 0.5 }}
+   <div  initial={{ opacity: 0 , scale:0.5 }} whileInView={{ opacity: 1 , scale:1 }}  transition={{ duration: 0.5 }}
     className="mx-auto w-full overflow-hidden mt-4 mb-4 space-y-8 px-4 py-16 sm:px-6 lg:space-y-16 lg:px-8"
   >
   <div className=" grid-flex  grid  grid-cols-1 sm:grid-cols-2 gap-4 ">
       {/* Left Div */}
-      <div className=' m-3  sm:order-1 flex justify-center items-start '>
+      <motion.div initial={{ opacity: 0 , scale:0.5 }} whileInView={{ opacity: 1 , scale:1 }}  transition={{ duration: 0.5 }} className=' m-3  sm:order-1 flex justify-center items-start '>
       
-      {/* <Lottie animationData={animationDataSent} style={{opacity:1, width:300,height:300 }}/> */}
-      <Lottie animationData={animationDataFull} style={{opacity:1 }}/>
+      <Lottie animationData={animationDataSent} style={{opacity:1, width:300,height:300 }}/>
+      {/* <Lottie animationData={animationDataFull} style={{opacity:1 }}/> */}
  
-      </div>
+      </motion.div>
 
       {/* Right Div */}
-      <div className='order-2  '>
-      <motion.div
-        initial={{ opacity: 0 , scale:0.5 }}
+      <motion.div className='order-2  ' initial={{ opacity: 0 , scale:0.5 }}
         animate={{ opacity: 1 , scale:1 }}
-        transition={{ duration: 0.5 }}
-        className='bg-white bg-opacity-80 border border-gray-400 p-8 rounded-2xl'
+        transition={{ duration: 0.5 }}>
+      <div
+        
+        className='bg-white bg-opacity-40 border backdrop-blur-md border-gray-400 p-8 rounded-2xl'
       >
        
         <h3 className='mt-5  font-bold leading-[1.15] text-black  text-center text-2xl m-2'>Contact us.</h3>
@@ -141,10 +141,10 @@ function Contact() {
             {loading ? "Sending..." : "Send"}
           </button>
         </form>
-      </motion.div>
-       </div>
+      </div>
+       </motion.div>
     </div>
-    </motion.div>
+    </div>
    
 </>
   )

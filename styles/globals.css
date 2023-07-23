@@ -88,22 +88,26 @@
   @apply rounded-md border border bg-transparent py-1.5 px-5 text-black transition-all hover:bg-gradient-to-tl from-purple-500  to-pink-500 hover:text-white text-center text-sm font-inter flex items-center justify-center;
 }
 .outline_orange_btn_no_hover {
-  @apply rounded-md border  bg-transparent  border-orange-300   ;
+  @apply rounded-md border  bg-transparent  border-primary-orange   ;
   box-shadow: 0 0 30px 0 rgba(255, 111, 0, 0.7);;
 }
 .outline_orange_btn {
-  @apply rounded-md border  bg-transparent py-1.5 px-5 text-black transition-all hover:bg-gradient-to-br from-first-orange via-orange-600 to-last-yellow hover:text-white text-center text-sm font-inter flex items-center justify-center border-orange-300   ;
+  @apply rounded-md border  bg-transparent py-1.5 px-5 text-black transition-all hover:bg-gradient-to-br from-first-orange via-primary-orange to-last-yellow hover:text-white text-center text-sm font-inter flex items-center justify-center border-orange-300   ;
   box-shadow: 0 0 30px 0 rgba(255, 111, 0, 0.7);;
 }
+.orange_btn {
+  @apply rounded-md border  bg-transparent py-1.5 px-5 text-primary-orange font-semibold  transition-all hover:font-normal hover:bg-gradient-to-br from-first-orange via-primary-orange to-last-yellow hover:text-white text-center hover:border-none text-sm font-inter flex items-center justify-center border-primary-orange   ;
+
+}
 .outline_orange_card {
-  @apply rounded-md border  bg-white py-1.5 px-5 text-black transition-all hover:bg-gradient-to-br from-first-orange via-orange-600 to-last-yellow hover:text-white text-center text-sm font-inter flex items-center justify-center border-orange-300   ;
+  @apply rounded-md border  bg-white py-1.5 px-5 text-black transition-all hover:bg-gradient-to-br from-first-orange via-primary-orange to-last-yellow hover:text-white text-center text-sm font-inter flex items-center justify-center border-orange-300   ;
   box-shadow: 0 0 30px 0 rgba(255, 111, 0, 0.7);;
 }
 .outline_orange_btn_no_border {
-  @apply rounded-md  bg-transparent  py-1.5 px-5 text-black transition-all hover:bg-gradient-to-br from-first-orange via-orange-600 to-last-yellow hover:text-white text-center text-sm font-inter flex items-center justify-center;
+  @apply rounded-md  bg-transparent  py-1.5 px-5 text-black transition-all hover:bg-gradient-to-br from-first-orange via-primary-orange to-last-yellow hover:text-white text-center text-sm font-inter flex items-center justify-center;
 }
 .outline_orange_card_stats {
-  @apply rounded-md  border border-gray-300 bg-gray-100  py-1.5  transition-all hover:bg-gradient-to-br from-first-orange via-orange-600 to-last-yellow hover:text-white  font-inter      ;
+  @apply rounded-md  border border-gray-300 bg-gray-100  py-1.5  transition-all hover:bg-gradient-to-br from-first-orange via-primary-orange to-last-yellow hover:text-white  font-inter      ;
  
 }
 
@@ -117,7 +121,7 @@
   @apply mt-5 text-3xl font-bold leading-[1.15] text-black sm:text-6xl;
 }
 .orange_gradient {
-  @apply bg-gradient-to-r from-first-orange  to-last-yellow bg-clip-text text-transparent;
+  @apply bg-gradient-to-r from-first-orange via-primary-orange  to-last-yellow bg-clip-text text-transparent;
 }
 
 .purple_blue_gradient{
@@ -134,7 +138,7 @@
   @apply bg-gradient-to-r from-blue-600 via-cyan-600 to-cyan-400 bg-clip-text text-transparent;
 }
 .number_zone{
-  @apply rounded-full  bg-gradient-to-tl  from-first-orange via-orange-600 to-last-yellow h-10 w-10 flex justify-center items-center text-white font-inter font-semibold
+  @apply rounded-full  bg-gradient-to-tl  from-first-orange via-primary-orange to-last-yellow h-10 w-10 flex justify-center items-center text-white font-inter font-semibold
 }
 .desc {
   @apply mt-5 text-lg text-gray-600 sm:text-xl max-w-2xl;

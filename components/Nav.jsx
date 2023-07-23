@@ -10,7 +10,20 @@ function Nav() {
     const {data:session}= useSession();
     const [providers,setProviders]=useState(null);
    
+    const [scrolled, setScrolled] = useState(false);
 
+    useEffect(() => {
+      const handleScroll = () => {
+        const isScrolled = window.scrollY > 0;
+        setScrolled(isScrolled);
+      };
+  
+      window.addEventListener('scroll', handleScroll);
+  
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+    }, []);
     useEffect(()=>
     {
 const setUpProviders=async ()=> {
@@ -20,7 +33,11 @@ const setUpProviders=async ()=> {
 setUpProviders();
     },[])
   return (
-    <nav className=' w-full flex-between  pt-3  sticky top-0 backdrop-blur-md z-20 bg-white bg-opacity-60 '>
+    <nav
+      className={`w-full flex-between pt-3 sticky top-0 backdrop-blur-md z-20 ${
+        scrolled ? 'bg-gray-100 border border-gray-200 bg-opacity-60' : 'bg-transparent border-none'
+      }`}
+    >
 <Link href="/" className='flex gap-2 flex-center'>
     <Image src="/assets/images/pitchini-website.png"
     alt="Our logo"
