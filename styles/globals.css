@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+  Note: The styles for this gradient grid background is heavily inspired by the creator of this amazing site (https://dub.sh) – all credits go to them! 
+*/
+/* *{
+ outline: 1px solid red;
+} */
+
+.main {
+
+  width: 100%;
+  min-height: 100vh;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+
+ 
+}
+
+.main:before {
+ 
+  position: absolute;
+  content: "";
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+
+.main:after {
+  content: "";
+  
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  opacity: 0.4;
+  filter: invert(1);
+}
+
+.gradient {
+  height: fit-content;
+  z-index: 3;
+  width: 100%;
+  max-width: 640px;
+  background-image: radial-gradient(
+      at 27% 37%,
+      hsla(215, 98%, 61%, 1) 0px,
+      transparent 0%
+    ),
+    radial-gradient(at 97% 21%, hsla(125, 98%, 72%, 1) 0px, transparent 50%),
+    radial-gradient(at 52% 99%, hsla(354, 98%, 61%, 1) 0px, transparent 50%),
+    radial-gradient(at 10% 29%, hsla(256, 96%, 67%, 1) 0px, transparent 50%),
+    radial-gradient(at 97% 96%, hsla(38, 60%, 74%, 1) 0px, transparent 50%),
+    radial-gradient(at 33% 50%, hsla(222, 67%, 73%, 1) 0px, transparent 50%),
+    radial-gradient(at 79% 53%, hsla(343, 68%, 79%, 1) 0px, transparent 50%);
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  filter: blur(100px) saturate(150%);
+  top: 80px;
+  opacity: 0.15;
+}
+
+@media screen and (max-width: 640px) {
+  .main {
+    padding: 0;
+  }
+}
+
+/* Tailwind Styles */
+
+.app {
+  @apply relative z-10 flex justify-center items-center flex-col max-w-7xl mx-auto sm:px-16 px-6;
+}
+
+.black_btn {
+  @apply rounded-md border border-black bg-black py-1.5 px-5 text-white transition-all  text-center text-sm font-inter flex items-center justify-center;
+}
+.white_btn {
+  @apply rounded-md  border-2 border-orange-400 bg-transparent py-1.5 px-5 text-orange-400 transition-all  text-center text-sm font-inter flex items-center justify-center hover:bg-orange-400 hover:text-white;
+}
+.back_btn {
+  @apply rounded-md  border-2 border-gray-400 bg-transparent py-1.5 px-5 text-gray-400 transition-all  text-center text-sm font-inter flex items-center justify-center hover:bg-gray-400 hover:text-white;
+}
+.outline_btn {
+  @apply rounded-md border border bg-transparent py-1.5 px-5 text-orange-400 transition-all hover:bg-gradient-to-tl from-purple-500  to-pink-500 hover:text-white text-center text-sm font-inter flex items-center justify-center;
+}
+.outline_orange_btn_no_hover {
+  @apply rounded-md border  bg-transparent  border-primary-orange   ;
+  box-shadow: 0 0 20px 0 rgba(255, 111, 0, 0.7);;
+}
+.outline_orange_btn {
+  @apply rounded-md border  bg-transparent py-1.5 px-5 text-orange-500 transition-all hover:bg-gradient-to-br from-first-orange via-primary-orange to-last-yellow hover:text-white text-center text-sm font-inter flex items-center justify-center border-orange-300   ;
+  box-shadow: 0 0 15px 0 rgba(255, 111, 0, 0.7);;
+}
+.orange_btn {
+  @apply rounded-md border  bg-transparent py-1.5 px-5 text-primary-orange font-semibold  transition-all hover:font-normal hover:bg-gradient-to-br from-first-orange via-primary-orange to-last-yellow hover:text-white text-center hover:border-none text-sm font-inter flex items-center justify-center border-primary-orange   ;
+
+}
+.outline_orange_card {
+  @apply rounded-md border  bg-white py-1.5 px-5 text-black transition-all hover:bg-gradient-to-br from-first-orange via-primary-orange to-last-yellow hover:text-white text-center text-sm font-inter flex items-center justify-center border-orange-300   ;
+  box-shadow: 0 0 30px 0 rgba(255, 111, 0, 0.7);;
+}
+.outline_orange_btn_no_border {
+  @apply rounded-md  bg-transparent  py-1.5 px-5 text-black transition-all hover:bg-gradient-to-br from-first-orange via-primary-orange to-last-yellow hover:text-white text-center text-sm font-inter flex items-center justify-center;
+}
+.outline_orange_card_stats {
+  @apply rounded-md  border border-gray-300 bg-gray-100  py-1.5  transition-all hover:bg-gradient-to-br from-first-orange via-primary-orange to-last-yellow hover:text-white  font-inter      ;
+ 
+}
+.outline_orange_btn_grey_border {
+  @apply rounded-md  bg-transparent   border border-gray-400  py-1.5 px-5 text-blue-500 transition-all hover:bg-gradient-to-br from-first-orange via-primary-orange to-last-yellow hover:text-white text-center text-sm font-inter flex items-center justify-center;
+  box-shadow: 0 0 5px 0
+  ;
+}
+.outline_red_btn_no_border {
+  @apply rounded-md  bg-transparent py-1.5 px-5 text-red-600 transition-all hover:bg-gradient-to-br from-red-600 via-red-500 to-red-400 hover:text-white text-center text-sm font-inter flex items-center justify-center;
+}
+.head_text {
+  @apply mt-5 text-5xl font-extrabold leading-[1.15] text-black sm:text-8xl;
+}
+.semi_head_text {
+  @apply mt-5 text-3xl font-bold leading-[1.15] text-black sm:text-6xl;
+}
+.small_head_text {
+  @apply mt-5 text-2xl font-bold leading-[1.15] text-black sm:text-4xl;
+}
+.orange_gradient {
+  @apply bg-gradient-to-r from-first-orange via-primary-orange  to-last-yellow bg-clip-text text-transparent;
+}
+
+.purple_blue_gradient{
+  @apply bg-gradient-to-r from-purple-600 via-pink-500 to-blue-600  bg-clip-text text-transparent;
+}
+.purple_gradient{
+  @apply bg-gradient-to-r from-purple-600  to-pink-500 bg-clip-text text-transparent
+}
+.green_gradient {
+  @apply bg-gradient-to-r from-green-400 via-green-500 to-yellow-300 bg-clip-text text-transparent;
+}
+
+.blue_gradient {
+  @apply bg-gradient-to-r from-blue-600 via-cyan-600 to-cyan-400 bg-clip-text text-transparent;
+}
+.number_zone{
+  @apply rounded-full  bg-gradient-to-tl  from-first-orange via-primary-orange to-last-yellow h-10 w-10 flex justify-center items-center text-white font-inter font-semibold
+}
+.desc {
+  @apply mt-5 text-lg text-gray-600 sm:text-xl max-w-2xl;
+}
+.desc {
+  @apply mt-5 text-lg text-gray-600 sm:text-lg max-w-xl;
+}
+.search_input {
+  @apply block w-full rounded-md border border-gray-200 bg-white py-2.5 font-satoshi pl-5 pr-12 text-sm shadow-lg font-medium focus:border-black focus:outline-none focus:ring-0;
+}
+
+.copy_btn {
+  @apply w-7 h-7 rounded-full bg-white/10 shadow-[inset_10px_-50px_94px_0_rgb(199,199,199,0.2)] backdrop-blur flex justify-center items-center cursor-pointer;
+}
+
+.glassmorphism {
+  @apply rounded-xl border border-gray-200 bg-white/20 shadow-[inset_10px_-50px_94px_0_rgb(199,199,199,0.2)] backdrop-blur p-5;
+}
+
+.prompt_layout {
+  @apply space-y-6 py-8 sm:columns-2 sm:gap-6 xl:columns-3;
+}
+
+/* Feed Component */
+.feed {
+  @apply mt-16 mx-auto w-full max-w-xl flex justify-center items-center flex-col gap-2;
+}
+
+/* Form Component */
+.form_textarea {
+  @apply w-full flex rounded-lg h-[200px] mt-2 p-3 text-sm text-gray-500 outline-0;
+}
+
+.form_input {
+  @apply w-full flex rounded-lg mt-2 p-3 text-sm text-gray-500 outline-0;
+}
+
+/* Nav Component */
+.logo_text {
+  @apply max-sm:hidden font-satoshi font-semibold text-lg text-black tracking-wide;
+}
+
+.dropdown {
+  @apply absolute right-0 top-full mt-3 w-full p-5 rounded-lg bg-white min-w-[210px] flex flex-col gap-2 justify-end items-end;
+}
+
+.dropdown_link {
+  @apply text-sm font-inter text-gray-700 hover:text-gray-500 font-medium;
+}
+
+/* PromptCard Component */
+.prompt_card {
+  @apply flex-1 break-inside-avoid rounded-lg border border-gray-300 bg-white/20 bg-clip-padding p-6 pb-4 backdrop-blur-lg backdrop-filter md:w-[360px] w-full h-fit;
+}
+
+.flex-center {
+  @apply flex justify-center items-center;
+}
+
+.flex-start {
+  @apply flex justify-start items-start;
+}
+
+.flex-end {
+  @apply flex justify-end items-center;
+}
+
+.flex-between {
+  @apply flex justify-between items-center;
+}
