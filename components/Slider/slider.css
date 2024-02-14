@@ -1,0 +1,25 @@
+.slider {
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .slide-track {
+    display: flex;
+    animation: slideAnimation 50s linear infinite;
+  }
+  
+  .slide {
+    flex-shrink: 0;
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+  }
+  
+  @keyframes slideAnimation {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
